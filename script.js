@@ -18,8 +18,16 @@ let exo1 = {
 let objLinea = JSON.stringify(exo1);
 localStorage.setItem("obj",objLinea);
 
-let objLinea = localStorage.getItem("obj");
-let exo1 = JSON.parse(objLinea);
+objLinea = localStorage.getItem("obj");
+exo1 = JSON.parse(objLinea);
 
 
 console.log(objLinea)
+
+let nameInput = document.getElementById('name');
+let register = document.getElementsById('register')
+register.addEventListener('click', function(){
+    let name = nameInput.value;
+    localStorage.setItem("nom", name)
+});
+
