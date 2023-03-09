@@ -9,3 +9,17 @@ elt.appendChild(newElt);
 const newSec = document.createElement('section');
 newSec.innerHTML = "<span><li>span1</li></span>";
 elt.replaceChild(document.createElement("section"), newElt);
+
+let exo1 = {
+    difficulty : "easy",
+    line : 4,
+};
+
+let objLinea = JSON.stringify(exo1);
+localStorage.setItem("obj",objLinea);
+
+let objLinea = localStorage.getItem("obj");
+let exo1 = JSON.parse(objLinea);
+
+
+console.log(objLinea)
