@@ -25,9 +25,13 @@ exo1 = JSON.parse(objLinea);
 console.log(objLinea)
 
 let nameInput = document.getElementById('name');
-let register = document.getElementsById('register')
+let register = document.getElementById('register')
 register.addEventListener('click', function(){
     let name = nameInput.value;
     localStorage.setItem("nom", name)
 });
 
+let removeData = document.getElementById('display')
+removeData.addEventListener('click', function(){
+    localStorage.clear();
+})
